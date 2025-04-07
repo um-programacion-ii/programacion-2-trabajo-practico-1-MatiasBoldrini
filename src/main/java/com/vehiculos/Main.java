@@ -201,6 +201,7 @@ public class Main {
 
         } catch (NumberFormatException e) {
             System.out.println("Error: Formato de número inválido. " + e.getMessage());
+
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
         }
@@ -238,3 +239,4 @@ public class Main {
         }
     }
 }
+

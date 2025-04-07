@@ -2,6 +2,7 @@ package com.vehiculos;
 
 /**
  * Subclase que representa un automóvil, extendiendo la clase Vehiculo.
+
  */
 public class Auto extends Vehiculo {
 

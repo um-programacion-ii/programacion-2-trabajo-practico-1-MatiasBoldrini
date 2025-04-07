@@ -2,6 +2,7 @@ package com.vehiculos;
 
 /**
  * Clase que se encarga de imprimir información de vehículos.
+
  */
 public class VehiculoPrinter {
 
@@ -18,8 +19,6 @@ public class VehiculoPrinter {
 
     /**
      * Imprime los detalles básicos comunes a todos los vehículos.
-     * 
-     * @param vehiculo El vehículo del cual mostrar los detalles básicos
      */
     protected final void imprimirDetallesBasicos(Vehiculo vehiculo) {
         System.out.println("Patente: " + vehiculo.getPatente());
@@ -30,6 +29,7 @@ public class VehiculoPrinter {
 
     /**
      * Imprime detalles específicos del tipo de vehículo.
+
      * 
      * @param vehiculo El vehículo del cual mostrar los detalles específicos
      */
@@ -47,11 +47,13 @@ public class VehiculoPrinter {
         }
     }
 
+
     /**
      * Imprime la información del vehículo con un título personalizado.
      * 
      * @param vehiculo El vehículo a imprimir
      * @param titulo   El título que precederá a la información del vehículo
+
      */
     public void imprimirVehiculoConTitulo(Vehiculo vehiculo, String titulo) {
         System.out.println("\n=== " + titulo + " ===");
