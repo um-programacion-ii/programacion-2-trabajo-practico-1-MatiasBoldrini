@@ -1,7 +1,9 @@
 package com.vehiculos;
 
 /**
- * Clase principal para demostrar la funcionalidad de la clase Vehiculo.
+ * Clase principal para demostrar la funcionalidad de las clases Vehiculo y
+ * VehiculoPrinter.
+
  */
 public class Main {
 
@@ -14,14 +16,14 @@ public class Main {
             Vehiculo vehiculo2 = new Vehiculo("XYZ789", "Ford", 2018, 750.0);
             Vehiculo vehiculo3 = new Vehiculo("DEF456", "Honda", 2022, 600.25);
 
-            System.out.println("\n=== Vehículo 1 ===");
-            vehiculo1.mostrarInformacion();
+            // Crear el impresor de vehículos
+            VehiculoPrinter printer = new VehiculoPrinter();
 
-            System.out.println("\n=== Vehículo 2 ===");
-            vehiculo2.mostrarInformacion();
+            // Imprimir información de los vehículos
+            printer.imprimirVehiculoConTitulo(vehiculo1, "Vehículo 1");
+            printer.imprimirVehiculoConTitulo(vehiculo2, "Vehículo 2");
+            printer.imprimirVehiculoConTitulo(vehiculo3, "Vehículo 3");
 
-            System.out.println("\n=== Vehículo 3 ===");
-            vehiculo3.mostrarInformacion();
 
             // Demostración de getters y setters
             System.out.println("\n=== Modificación de vehículo ===");
@@ -30,8 +32,8 @@ public class Main {
             System.out.println("Nueva marca del vehículo 1: " + vehiculo1.getMarca());
 
             // Mostrar información actualizada
-            System.out.println("\n=== Vehículo 1 (Actualizado) ===");
-            vehiculo1.mostrarInformacion();
+            printer.imprimirVehiculoConTitulo(vehiculo1, "Vehículo 1 (Actualizado)");
+
 
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
