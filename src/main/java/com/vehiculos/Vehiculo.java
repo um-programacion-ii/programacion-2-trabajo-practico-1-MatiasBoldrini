@@ -47,6 +47,7 @@ public class Vehiculo {
     }
 
 
+
     /**
      * Muestra la información completa del vehículo.
      */
@@ -57,7 +58,6 @@ public class Vehiculo {
         System.out.println("Año: " + anio);
         System.out.println("Capacidad de carga: " + capacidadCargaKg + " kg");
     }
-
 
     // Getters y setters
 
