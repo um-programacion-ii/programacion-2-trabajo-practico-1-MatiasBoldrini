@@ -3,6 +3,7 @@ package com.vehiculos;
 /**
  * Clase principal para demostrar la funcionalidad de las clases Vehiculo y
  * VehiculoPrinter.
+
  */
 public class Main {
 
@@ -23,6 +24,7 @@ public class Main {
             printer.imprimirVehiculoConTitulo(vehiculo2, "Vehículo 2");
             printer.imprimirVehiculoConTitulo(vehiculo3, "Vehículo 3");
 
+
             // Demostración de getters y setters
             System.out.println("\n=== Modificación de vehículo ===");
             System.out.println("Marca original del vehículo 1: " + vehiculo1.getMarca());
@@ -31,6 +33,7 @@ public class Main {
 
             // Mostrar información actualizada
             printer.imprimirVehiculoConTitulo(vehiculo1, "Vehículo 1 (Actualizado)");
+
 
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
