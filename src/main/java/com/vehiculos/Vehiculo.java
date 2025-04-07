@@ -59,6 +59,7 @@ public class Vehiculo {
         System.out.println("Capacidad de carga: " + capacidadCargaKg + " kg");
     }
 
+
     // Getters y setters
 
     public String getPatente() {

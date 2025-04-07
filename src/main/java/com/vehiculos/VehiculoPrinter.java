@@ -2,11 +2,9 @@ package com.vehiculos;
 
 /**
  * Clase que se encarga de imprimir información de vehículos.
-
  * Diseñada siguiendo el principio Abierto/Cerrado (OCP).
  */
 public class VehiculoPrinter {
-    
 
     /**
      * Muestra la información completa de un vehículo.
@@ -18,7 +16,6 @@ public class VehiculoPrinter {
         imprimirDetallesBasicos(vehiculo);
         imprimirDetallesEspecificos(vehiculo);
     }
-    
     /**
      * Imprime los detalles básicos comunes a todos los vehículos.
      * Este método es final para garantizar que todos los vehículos
@@ -27,8 +24,13 @@ public class VehiculoPrinter {
      * @param vehiculo El vehículo del cual mostrar los detalles básicos
      */
     protected final void imprimirDetallesBasicos(Vehiculo vehiculo) {
+        System.out.println("Patente: " + vehiculo.getPatente());
+        System.out.println("Marca: " + vehiculo.getMarca());
+        System.out.println("Año: " + vehiculo.getAnio());
+        System.out.println("Capacidad de carga: " + vehiculo.getCapacidadCargaKg() + " kg");
+    }
 
-    
+
     /**
      * Imprime detalles específicos del tipo de vehículo.
      * Este método está diseñado para ser sobrescrito por las subclases.
@@ -38,7 +40,7 @@ public class VehiculoPrinter {
     protected void imprimirDetallesEspecificos(Vehiculo vehiculo) {
         // No hay detalles específicos para la clase base
     }
-    
+
 
     /**
      * Imprime la información del vehículo con un título personalizado.
