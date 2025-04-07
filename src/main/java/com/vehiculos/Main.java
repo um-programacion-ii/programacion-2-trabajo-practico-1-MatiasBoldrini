@@ -40,8 +40,9 @@ public class Main {
             System.out.println("\nCamión usando impresor genérico (no muestra información de acoplado):");
             vehiculoPrinter.imprimirVehiculoConTitulo(camion1, "Camión con impresor genérico");
             
+
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
         }
     }
-} 
+}
