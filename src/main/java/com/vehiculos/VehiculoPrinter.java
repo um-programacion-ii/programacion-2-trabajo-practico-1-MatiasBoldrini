@@ -16,7 +16,6 @@ public class VehiculoPrinter {
         imprimirDetallesBasicos(vehiculo);
         imprimirDetallesEspecificos(vehiculo);
     }
-
     /**
      * Imprime los detalles básicos comunes a todos los vehículos.
      * Este método es final para garantizar que todos los vehículos
@@ -31,6 +30,7 @@ public class VehiculoPrinter {
         System.out.println("Capacidad de carga: " + vehiculo.getCapacidadCargaKg() + " kg");
     }
 
+
     /**
      * Imprime detalles específicos del tipo de vehículo.
      * Este método está diseñado para ser sobrescrito por las subclases.
@@ -41,11 +41,13 @@ public class VehiculoPrinter {
         // No hay detalles específicos para la clase base
     }
 
+
     /**
      * Imprime la información del vehículo con un título personalizado.
      * 
      * @param vehiculo El vehículo a imprimir
      * @param titulo   El título que precederá a la información del vehículo
+
      */
     public void imprimirVehiculoConTitulo(Vehiculo vehiculo, String titulo) {
         System.out.println("\n=== " + titulo + " ===");

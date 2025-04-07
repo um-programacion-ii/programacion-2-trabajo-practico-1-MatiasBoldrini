@@ -4,6 +4,7 @@ package com.vehiculos;
  * Clase especializada en imprimir camiones.
  * Extiende de VehiculoPrinter, demostrando el principio de Sustitución de
  * Liskov (LSP).
+
  */
 public class CamionPrinter extends VehiculoPrinter {
 
