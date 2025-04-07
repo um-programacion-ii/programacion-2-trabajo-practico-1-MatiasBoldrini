@@ -1,6 +1,9 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/-JQrLgaz)
 # 🧠 Trabajo Práctico: Sistema de Gestión de Vehículos (Java + SOLID + GitHub)
 
+## 📋 Información del Alumno
+- **Nombre y Apellido:** Matias Boldrini
+
 ## 📌 Objetivo General
 
 Desarrollar una aplicación en Java para gestionar vehículos de una empresa, aplicando los principios de programación orientada a objetos y los **primeros tres principios SOLID**:  
@@ -50,113 +53,98 @@ El trabajo está dividido en etapas. Cada etapa deberá registrarse como un **Mi
 
 ---
 
-## ✅ Entrega y Flujo de Trabajo con GitHub
+## 🚀 Instrucciones para Ejecutar el Proyecto
 
-Cada grupo debe:
+### Requisitos Previos
+- Java Development Kit (JDK) 8 o superior
+- Entorno de desarrollo integrado (IDE) como IntelliJ IDEA, Eclipse o Visual Studio Code (opcional)
+- Git instalado (para clonar el repositorio)
 
-1. Usar la asignación del repositorio compartido por Slack
+### Pasos para Compilar y Ejecutar
 
-2. **Proteger la rama main**:
-   - Ir a Settings > Branches > Branch protection rules
-   - Agregar regla para la rama `main`
-   - Requerir que los tests pasen antes de mergear
-   - No permitir push directo a main
+#### Usando Terminal
 
-3. Crear un **Project** nuevo tipo _Kanban_ con columnas:
-   - `To Do`, `In Progress`, `In Review`, `Done`
+1. Clonar el repositorio:
+   ```
+   git clone https://github.com/um-programacion-ii/programacion-2-trabajo-practico-1-MatiasBoldrini.git
+   ```
 
-4. Crear un **Milestone por etapa**:
-   - `Etapa 1 - Clases básicas`
-   - `Etapa 2 - SRP`
-   - `Etapa 3 - OCP`
-   - `Etapa 4 - LSP`
-   - `Etapa 5 - ArrayList`
+2. Navegar al directorio del proyecto:
+   ```
+   cd programacion-2-trabajo-practico-1-MatiasBoldrini
+   ```
 
-5. Crear **Issues** por cada tarea concreta, por ejemplo:
-   - "Crear clase Vehiculo"
-   - "Crear clase VehiculoPrinter"
-   - "Crear subclase Camion"
+3. Compilar el proyecto:
+   ```
+   javac -d ./bin src/main/java/com/vehiculos/*.java
+   ```
 
-   Cada Issue debe:
-   - Tener un título claro y descripción breve
-   - Estar asociado a un `Milestone` y al `Project`
-   - Tener asignado al menos un miembro del equipo
-   - Incluir labels apropiados (ej: `enhancement`, `bug`, `documentation`)
-   - Ser implementado en una nueva rama (branch) creada desde `main`
-   - La rama debe seguir el formato: `feature/descripcion-corta` o `fix/descripcion-corta`
-   - Ser cerrado mediante un Pull Request (PR) que mergee la rama a `main`
-   - Actualizar su estado en el Kanban board según corresponda
+4. Ejecutar la aplicación:
+   ```
+   java -cp ./bin com.vehiculos.Main
+   ```
 
-6. Hacer **Pull Requests** por cada Issue.
-   - Cada PR debe mencionar el Issue que cierra (ej: `Closes #2`)
-   - Debe incluir los mismos labels que el Issue asociado
-   - Debe estar asociado al mismo Milestone que el Issue
-   - Debe estar asociado al mismo Project que el Issue
-   - El código debe estar revisado antes de ser fusionado a `main`
-   - Al mergear, actualizar el estado del Issue en el Kanban board a `Done`
+#### Usando un IDE
 
----
+1. Importar el proyecto en su IDE favorito.
+2. Asegurarse de que la estructura de directorios es correcta.
+3. Compilar el proyecto usando la funcionalidad del IDE.
+4. Ejecutar la clase `Main` ubicada en el paquete `com.vehiculos`.
 
-## ✅ Ejemplo de Issue
+### Ejemplos de Uso
 
-### Título
-Crear clase Vehiculo
+Al ejecutar la aplicación, se mostrará un menú con las siguientes opciones:
 
-### Descripción
-Implementar la clase base `Vehiculo` que servirá como punto de partida para la jerarquía de vehículos.
+```
+=== MENÚ PRINCIPAL ===
+1. Ver todos los vehículos
+2. Buscar vehículo por patente
+3. Agregar nuevo vehículo
+4. Eliminar vehículo
+5. Mostrar cantidad de vehículos
+6. Salir
+Seleccione una opción: 
+```
 
-#### Requisitos
-- Crear la clase con los siguientes atributos privados:
-  ```java
-  private String patente;
-  private String marca;
-  private int anio;
-  private double capacidadCargaKg;
-  ```
-- Implementar:
-  - Constructor con todos los atributos
-  - Getters y setters para cada atributo
-  - Método `mostrarInformacion()` que imprima todos los datos del vehículo
+#### Ver todos los vehículos (Opción 1)
+Muestra la información de todos los vehículos registrados en el sistema.
 
-#### Validaciones
-- La patente no puede ser null ni vacía
-- El año debe ser mayor a 1900 y menor o igual al año actual
-- La capacidad de carga debe ser positiva
+#### Buscar vehículo por patente (Opción 2)
+```
+Ingrese la patente a buscar: AUT001
 
-#### Criterios de Aceptación
-- [ ] La clase compila sin errores
-- [ ] Se incluyen todos los atributos requeridos
-- [ ] Se implementan todos los métodos necesarios
-- [ ] Se incluyen las validaciones especificadas
-- [ ] Se agrega documentación JavaDoc básica
+=== Vehículo con patente AUT001 ===
+Información del vehículo:
+Patente: AUT001
+Marca: Honda
+Año: 2022
+Capacidad de carga: 400.0 kg
+Tipo: Auto
+Cantidad de pasajeros: 5
+```
 
-#### Notas Adicionales
-- Considerar agregar constantes para los valores mínimos/máximos
-- Incluir mensajes de error descriptivos en las validaciones
+#### Agregar nuevo vehículo (Opción 3)
+```
+=== AGREGAR NUEVO VEHÍCULO ===
+Tipo de vehículo:
+1. Vehículo genérico
+2. Auto
+3. Camión
+Seleccione el tipo: 2
+Patente: AUT003
+Marca: BMW
+Año: 2023
+Capacidad de carga (kg): 500
+Cantidad de pasajeros: 4
+Vehículo agregado correctamente.
+```
 
-### Labels
-- `enhancement`
-- `good first issue`
-
-### Asignación
-- Milestone: `Etapa 1 - Clases básicas`
-- Project: `Sistema de Gestión de Vehículos`
-- Estado: `To Do`
-
-## ✅ Requisitos para la entrega final
-
-- ✅ Todos los Issues cerrados
-- ✅ Todos los Milestones completos
-- ✅ Todos los PRs revisados y mergeados
-- ✅ Project con todas las tareas en `Done`
-- ✅ Este archivo `README.md` completo con:
-  - Nombre y apellido del alumno
-  - Instrucciones detalladas de cómo ejecutar el proyecto
-  - Requisitos previos (JDK, IDE, etc.)
-  - Pasos para compilar y ejecutar
-  - Ejemplos de uso
-
-> ⏰ **Fecha de vencimiento**: 09/04/2025 a las 13:00 hs
+#### Eliminar vehículo (Opción 4)
+```
+=== ELIMINAR VEHÍCULO ===
+Ingrese la posición del vehículo a eliminar (1-7): 1
+Vehículo eliminado: Patente VEH001
+```
 
 ---
 
