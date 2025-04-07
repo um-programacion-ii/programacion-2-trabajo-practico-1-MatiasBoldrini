@@ -2,7 +2,7 @@ package com.vehiculos;
 
 /**
  * Subclase que representa un automóvil, extendiendo la clase Vehiculo.
- * Demuestra el principio de Sustitución de Liskov (LSP).
+
  */
 public class Auto extends Vehiculo {
 

@@ -2,7 +2,7 @@ package com.vehiculos;
 
 /**
  * Clase que se encarga de imprimir información de vehículos.
- * Diseñada siguiendo el principio Abierto/Cerrado (OCP).
+
  */
 public class VehiculoPrinter {
 
@@ -16,12 +16,9 @@ public class VehiculoPrinter {
         imprimirDetallesBasicos(vehiculo);
         imprimirDetallesEspecificos(vehiculo);
     }
+
     /**
      * Imprime los detalles básicos comunes a todos los vehículos.
-     * Este método es final para garantizar que todos los vehículos
-     * muestren esta información de manera consistente.
-     * 
-     * @param vehiculo El vehículo del cual mostrar los detalles básicos
      */
     protected final void imprimirDetallesBasicos(Vehiculo vehiculo) {
         System.out.println("Patente: " + vehiculo.getPatente());
@@ -30,15 +27,24 @@ public class VehiculoPrinter {
         System.out.println("Capacidad de carga: " + vehiculo.getCapacidadCargaKg() + " kg");
     }
 
-
     /**
      * Imprime detalles específicos del tipo de vehículo.
-     * Este método está diseñado para ser sobrescrito por las subclases.
+
      * 
      * @param vehiculo El vehículo del cual mostrar los detalles específicos
      */
     protected void imprimirDetallesEspecificos(Vehiculo vehiculo) {
-        // No hay detalles específicos para la clase base
+        if (vehiculo instanceof Auto) {
+            Auto auto = (Auto) vehiculo;
+            System.out.println("Tipo: Auto");
+            System.out.println("Cantidad de pasajeros: " + auto.getCantidadPasajeros());
+        } else if (vehiculo instanceof Camion) {
+            Camion camion = (Camion) vehiculo;
+            System.out.println("Tipo: Camión");
+            System.out.println("Tiene acoplado: " + (camion.getTieneAcoplado() ? "Sí" : "No"));
+        } else {
+            System.out.println("Tipo: Vehículo genérico");
+        }
     }
 
 

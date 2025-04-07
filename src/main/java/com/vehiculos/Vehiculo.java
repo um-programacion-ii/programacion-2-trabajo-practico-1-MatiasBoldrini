@@ -46,20 +46,6 @@ public class Vehiculo {
         this.capacidadCargaKg = capacidadCargaKg;
     }
 
-
-
-    /**
-     * Muestra la información completa del vehículo.
-     */
-    public void mostrarInformacion() {
-        System.out.println("Información del vehículo:");
-        System.out.println("Patente: " + patente);
-        System.out.println("Marca: " + marca);
-        System.out.println("Año: " + anio);
-        System.out.println("Capacidad de carga: " + capacidadCargaKg + " kg");
-    }
-
-
     // Getters y setters
 
     public String getPatente() {
